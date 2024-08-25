@@ -4,23 +4,27 @@
   "description": "a project for Fetch Rewards",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tsc && mocha dist/**/*.spec.js",
     "build": "tsc",
     "serve": "tsc && node --inspect dist/"
   },
   "author": "Zachary Boulanger",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^22.5.0",
     "express": "^4.19.2",
-    "@types/express": "^4.17.21",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@types/mocha": "^10.0.7",
+    "@types/supertest": "^6.0.2",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
+    "mocha": "^10.7.3",
     "openapi-typescript": "^7.3.0",
+    "supertest": "^7.0.0",
     "typescript-eslint": "^8.2.0"
   }
 }
