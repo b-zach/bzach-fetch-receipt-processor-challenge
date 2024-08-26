@@ -54,8 +54,7 @@ export class PointCalculator {
     }
 
     private getPointsByPurchaseTime(purchaseTime: string): number {
-        // todo: add better handling for invalid purchaseTime
-        const purchaseHour = parseInt(purchaseTime.split(':')[0] ?? '0');
+        const purchaseHour = parseInt(purchaseTime.split(':')[0]!);
         return purchaseHour >= 14 && purchaseHour < 16 ? 10 : 0;
     }
 }

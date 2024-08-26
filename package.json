@@ -4,7 +4,7 @@
   "description": "a project for Fetch Rewards",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && mocha dist/**/*.spec.js",
+    "test": "tsc && mocha dist/**/*.spec.js dist/*.spec.js",
     "build": "tsc",
     "serve": "tsc && node --inspect dist/"
   },

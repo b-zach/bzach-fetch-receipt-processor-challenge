@@ -2,6 +2,11 @@ import {Receipt, Item} from '../schema';
 import assert from 'node:assert';
 
 export class ReceiptValidator {
+    /**
+     * Validates that the receipt is in the proper format.
+     * @param receipt 
+     * @throws AssertionError is any part of the receipt is invalid.
+     */
     public validate(receipt: Receipt): void {
         const moneyFormatValidator: RegExp = /^\d+\.\d{2}$/;
         const textValidator: RegExp = /^[\w\s\-&]+$/;
