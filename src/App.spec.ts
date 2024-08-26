@@ -25,7 +25,7 @@ describe('Receipt Processor', () => {
             supertest(app)
                 .post('/receipts/process')
                 .send({})
-                .expect(400, done);
+                .expect(400, 'The receipt is invalid', done);
         });
     });
 
@@ -47,7 +47,7 @@ describe('Receipt Processor', () => {
         it('returns status code 404 if sent an unknown id', (done) => {
             supertest(app)
                 .get('/receipts/1/points')
-                .expect(404, done);
+                .expect(404, 'No receipt found for that id', done);
         });
     });
 });

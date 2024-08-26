@@ -1,0 +1,12 @@
+{
+    "retailer": "Bobs Burgers - Location 1",
+    "purchaseDate": "2024-08-25",
+    "purchaseTime": "14:55",
+    "total": "20.00",
+    "items": [
+        {"shortDescription": "Pepsi - 12-oz", "price": "1.50"},
+        {"shortDescription": "Mission A-corn-plished Burger", "price": "8.00"},
+        {"shortDescription": "Fig-eta bout it Burger", "price": "8.00"},
+        {"shortDescription": "Pepsi - 16-oz", "price": "2.50"}
+    ]
+}

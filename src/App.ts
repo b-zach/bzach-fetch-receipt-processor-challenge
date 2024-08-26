@@ -23,8 +23,7 @@ class App {
                 receipt = req.body;
                 this.receiptValidator.validate(receipt);
             } catch {
-                res.statusMessage = 'The receipt is invalid';
-                res.sendStatus(400);
+                res.status(400).send('The receipt is invalid');
                 return;
             }
 
@@ -40,8 +39,7 @@ class App {
             try {
                 points = this.storageService.getPoints(req.params.id);
             } catch {
-                res.statusMessage = 'No receipt found for that id';
-                res.sendStatus(404);
+                res.status(404).send('No receipt found for that id');
                 return;
             }
             
