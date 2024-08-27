@@ -8,8 +8,7 @@ class App {
         private readonly storageService = new StorageService(),
         private readonly pointCalculator = new PointCalculator(),
         private readonly receiptValidator = new ReceiptValidator(),
-) {
-        this.app = express();
+    ) {
         this.mountRoutes();
     }
 
